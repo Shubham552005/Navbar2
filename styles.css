@@ -1,0 +1,151 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    min-height: 100vh;
+}
+
+header{
+    position: fixed;
+    top: 0;
+    width: 87%;
+    background-color: #05d825;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.8rem 6.5%
+}
+
+#hamburger{
+    width: 35px;
+    height: 30px;
+    background-color: #05d825ca;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 3px;
+    align-items: center;
+    overflow: hidden;
+    display: none;
+ }
+ 
+ #hamburger div{
+    width: 29px;
+    height: 3.5px;
+    background-color: #fff;
+    transition: 500ms;
+ }
+
+header #brand{
+    font-size: 2.2rem;
+    font-weight: bold;
+    font-family: sans-serif;
+    color: #fff;
+    cursor: pointer;
+}
+
+header #brand img{
+    height: 1.7rem;
+    width: 1.7rem;
+}
+
+header #nav-1 ul{
+    display: flex;
+}
+
+header #nav-1 ul li{
+    color: #fff;
+    list-style: none;
+    text-transform: capitalize;
+    font-family: 'Times New Roman', serif;
+    font-size: 1.1rem;
+    padding: 0.3rem 1.5vw;
+    transition: 100ms;
+    cursor: pointer;
+}
+
+header #nav-1 ul li:hover{
+    background-color: #3f4a3c;
+    transform: scale(1.1);
+    border-radius: 10px;
+}
+
+header #nav-2{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #05d825ca;
+    width: 100%;
+    border-bottom-right-radius: 50px;
+    border-bottom-left-radius: 50px;
+    overflow: hidden;
+    transition: 500ms;
+}
+
+header #nav-2 ul li{
+    color: #fff;
+    position: relative;
+    left: 35%;
+    list-style: none;
+    padding: 1rem 0;
+    border-radius: 50px;
+    text-align: center;
+    text-transform: capitalize;
+    font-family: 'Times New Roman', serif;
+    font-size: 1.1rem;
+    width: 30%;
+    transition: 100ms;
+    cursor: pointer;
+}
+
+header #nav-2 ul li:hover{
+    background-color: #3f4a3c;
+    box-shadow: 2px 2px 5px black;
+    transform: scale(1.1);
+}
+
+.nav-2-remove{
+    height: 0;
+}
+
+@media(max-width: 850px){
+    header{
+        width: 94%;
+        padding: 0.8rem 3%;
+    }
+}
+
+@media(max-width: 760px){
+    #hamburger{
+        display: flex;
+    }
+
+    .nav-2-visible{
+        height: fit-content;
+        padding: 6rem 0;
+    }
+    
+    header{
+        width: 94%;
+        padding: 1rem 3%
+    }
+
+    header #nav-1 ul{
+        display: none;
+    }
+
+    header #brand{
+        font-size: 1.8rem;
+    }
+
+    header #brand img{
+        height: 1.3rem;
+        width: 1.3rem;
+    }
+}
+
+
+
+
